@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Practice JavaScript</title>
   <link rel="stylesheet" href="static/styles.css">
+  <script src="http://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -82,8 +84,20 @@
 <script>
   "use strict";
 
-  // code here for the above problem
+  document.querySelector('#multiplying-form')
+    .addEventListener('submit', (evt) => {
+      evt.preventDefault();
 
+      const selectedMult = Number(document.querySelector('#mults-of').value);
+      const max = Number(document.querySelector('#max').value);
+
+      const multiples = [];
+      for (let n = 0; n *= selectedMult; n <= max) {
+        multiples.push(n);
+      }
+
+      console.log(multiples);
+    });
 </script>
 
 <div class="hint">
@@ -116,7 +130,9 @@
 
 <script>
   "use strict";
-  // code here for above problem
+  
+  $('input.find-me').on('click', () => alert('Here is an alert box!'));
+
 </script>
 
 <div class="hint">
